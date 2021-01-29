@@ -109,10 +109,11 @@ if __name__ == "__main__":
     raw_participations = input("Enter your partiiation:\n")
     raw_percentages = input("Enter your percentages:\n")
 
-    loan_amount = float(raw_loan_amount)
-    if not loan_amount:
+    if not raw_loan_amount:
         print("Enter valid loan amount")
         exit(1)    
+    loan_amount = float(raw_loan_amount)
+
     # get the sorted array of bid objects
     sorted_bids = construct_bids(raw_participations, raw_percentages)
     if sorted_bids is not None:
