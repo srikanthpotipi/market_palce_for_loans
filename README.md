@@ -65,4 +65,6 @@ Output:
 
 # Solution Analysis
 
-# Potential improvements:
+# Potential improvements
+1) the block that compares sum of bids with max bid amount and constructing result array is repeated. This can be moved to a seperate function. Idea is not to overwhelm with many functions. So it is left like that 
+2) Right now codes vlaidates the emptyness of the whole participation or percentages. Good to have the check for individual values as well
