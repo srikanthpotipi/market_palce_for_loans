@@ -104,4 +104,4 @@ Note: The space required for creating objects is ignored here . Instead of stori
 
 # code walk through 
 I am NOT adding anything here on purpose. 
-Ideally if the naming convenstions and code oorganization is poeper and comments are appropriately used, this section wouldn't ne needed.
+Ideally if the naming convenstions,code oorganization is proper and comments are appropriately used, this section wouldn't ne needed.
