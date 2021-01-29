@@ -94,3 +94,4 @@ Note: The space required for creating objects is ignored here . Instead of stori
 1) the block that compares sum of bids with max bid amount and constructing result array is repeated. This can be moved to a seperate function. Idea is not to overwhelm with many functions. So it is left like that 
 2) Right now codes vlaidates the emptyness of the whole participation or percentages. Good to have the check for individual values as well
 3) There is always a better solution. But it comes at cost. O(n2) can be reduced at an expense of space
+4) A DEBUG flag can be passed and logging can be enabled
