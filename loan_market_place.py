@@ -17,7 +17,7 @@ def sortedBids(bids):
 def construct_bids(raw_participations, raw_percentages):
     bid_array = []
     # exit for empty values
-    if (raw_participations == ' ') or (raw_percentages == ' '):
+    if (not raw_participations ) or (not raw_percentages):
         return None
 
     participations =  raw_participations.split(' ')
@@ -50,7 +50,7 @@ def max_seller_profit(sorted_bids, loan_amount):
     max_amount = 0.0
     # OUTER loop
     for bid_index in range(0, len(sorted_bids)):
-        # check if the single value matches the loan amount
+        # check if the single bid participation value matches the loan amount
         if sorted_bids[bid_index].participation == loan_amount:
             total = get_total_participation(sorted_bids[bid_index])
             if total > max_amount:
@@ -63,38 +63,37 @@ def max_seller_profit(sorted_bids, loan_amount):
 
         # INNER loop
         while(left < right):
-            # check if outer index & left matches loan amount
+            # check if outer index & left bid participations matches loan amount
             if (sorted_bids[bid_index].participation + sorted_bids[left].participation) == target_amount:
                 total = get_total_participation(sorted_bids[bid_index], sorted_bids[left])
                 if total > max_amount:
                     result = [sorted_bids[bid_index].index, sorted_bids[left].index]
                 max_amount = max(max_amount, total)
 
-            # check if outer index & left matches loan amount    
+            # check if outer index & left bid participations matches loan amount    
             if (sorted_bids[bid_index].participation + sorted_bids[right].participation) == target_amount:
                 total = get_total_participation(sorted_bids[bid_index], sorted_bids[right])
                 if total > max_amount:
-                    # matches paticipation tha matches loan amount
                     result = [sorted_bids[bid_index].index, sorted_bids[right].index]
                 max_amount = max(max_amount, total)
 
             current_amount = sorted_bids[left].participation + sorted_bids[right].participation
 
-            # check left & right matches loan amount
+            # check left & right bid participations matches loan amount
             if current_amount == loan_amount:
                 total = get_total_participation(sorted_bids[left], sorted_bids[right])
                 if total > max_amount:
                     result = [sorted_bids[left].index, sorted_bids[right].index]
                 max_amount = max(max_amount, total)
 
-            # start comparing from left and right
+            # start comparing from left and from right
             if current_amount == target_amount:
                 total = get_total_participation(sorted_bids[bid_index], sorted_bids[left], sorted_bids[right])
                 if total > max_amount:
                     result = [sorted_bids[bid_index].index, sorted_bids[left].index, sorted_bids[right].index]
                 max_amount = max(max_amount, total)
             
-            # shift left or right 
+            # shift left by one or reduce right by one 
             if target_amount > current_amount:
                 left += 1
             else:
@@ -111,7 +110,7 @@ if __name__ == "__main__":
     raw_percentages = input("Enter your percentages:\n")
 
     loan_amount = float(raw_loan_amount)
-    if loan_amount is None:
+    if not loan_amount:
         print("Enter valid loan amount")
         exit(1)    
     # get the sorted array of bid objects
