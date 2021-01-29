@@ -5,7 +5,7 @@ Design a marketplace for loans. In this marketplace, different lenders sell and 
 python loan_market_place.py
 
 # sample output
-py .\loan_market_place.bck1.py
+py .\loan_market_place.py
 
 Enter your value:
 
