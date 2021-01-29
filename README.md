@@ -92,7 +92,7 @@ Output:
 1) sorting done in sortedBids() --> time : O(n*logn) ; space : O(1)
 2) logic from max_seller_profit() --> time: O(n*n) ; space : O(1)
 
-#### overall complexity : time: O(n-squared) ; space : O(1)
+#### overall complexity : time: O(n^2) ; space : O(1)
 For ret of the functions, the performance(spaec and time) is not dependent of the size of the input
 Note: The space required for creating objects is ignored here . Instead of storing in 2 arrays, we are storing a single array of objects. This wouldn't effect the logic complexity. The intermediate arrays used for storing result, etc. are not proportinal to the size of the input. Hence O(1)
 
@@ -104,4 +104,4 @@ Note: The space required for creating objects is ignored here . Instead of stori
 
 # code walk through 
 I am NOT adding anything here on purpose. 
-Ideally if the naming convenstions,code oorganization is proper and comments are appropriately used, this section wouldn't ne needed.
+Ideally if the naming convenstions,code oorganization is proper and comments are appropriately used, this section wouldn't be needed.
