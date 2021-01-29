@@ -18,7 +18,7 @@ python loan_market_place.py
 # Assumptions 
 
 # test cases
-## 1) different participation amount & percentage lengths 
+### 1) different participation amount & percentage lengths 
 200 
 
 100 90 30 200 80 100
@@ -27,8 +27,10 @@ python loan_market_place.py
 
 out: enter valid values
 
+### 2) Emtpy loan amount or participation or percentages ---> not valid
+
 ## other cases
-1) Input:
+### 1) Input:
 
 200
 
@@ -39,7 +41,7 @@ out: enter valid values
 Output:
 [3]
 
-2) Input:
+### 2) Input:
 
 200
 
@@ -50,7 +52,7 @@ Output:
 Output:
 [1,2,4]
 
-3) Input:
+### 3) Input:
 
 200
 
