@@ -3,3 +3,19 @@ Design a marketplace for loans. In this marketplace, different lenders sell and 
 
 # How to run the program?
 python loan_market_place.py
+
+# sample output
+
+# Problem statement analysis
+
+# constraints
+
+# Requirement analysis
+
+# Assumptions 
+
+# test cases
+
+# Solution Analysis
+
+# Potential improvements:
