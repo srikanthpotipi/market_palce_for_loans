@@ -95,3 +95,7 @@ Note: The space required for creating objects is ignored here . Instead of stori
 2) Right now codes vlaidates the emptyness of the whole participation or percentages. Good to have the check for individual values as well
 3) There is always a better solution. But it comes at cost. O(n2) can be reduced at an expense of space
 4) A DEBUG flag can be passed and logging can be enabled
+
+# code walk through 
+I am NOT adding anything here on purpose. 
+Ideally if the naming convenstions and code oorganization is poeper and comments are appropriately used, this section wouldn't ne needed.
