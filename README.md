@@ -6,12 +6,18 @@ python loan_market_place.py
 
 # sample output
 py .\loan_market_place.bck1.py
+
 Enter your value:
+
 200
 Enter your partiiation:
+
 100 90 30 30 80 100
+
 Enter your percentages:
+
 99 100 99 98.9 100 99
+
 max amount for the seller is: 199.7
 indeces for seller max profit: [1, 4, 2]
 
