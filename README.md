@@ -27,6 +27,7 @@ indeces for seller max profit: [1, 4, 2]
 # Requirement analysis
 1) Max profit for the seller 
 2) given input --> loan amount from seller, particiaption amount array and percentages array
+3) output --> indeces of the participations that giove the max profit to seller 
 
 # Assumptions 
 1) percentages would be less than 100
@@ -81,13 +82,15 @@ Output:
 [0,5]
 
 # Solution Analysis
-The majot things to consider are:
+#### The majot things to consider are:
 1) sorting done in sortedBids() --> time : O(n*logn) ; space : O(1)
 2) logic from max_seller_profit() --> time: O(n*n) ; space : O(1)
 
-overall complexity : time: O(n-squared) ; space : O(1)
+#### overall complexity : time: O(n-squared) ; space : O(1)
 For ret of the functions, the performance(spaec and time) is not dependent of the size of the input
+Note: The space required for creating objects is ignored here . Instead of storing in 2 arrays, we are storing a single array of objects. This wouldn't effect the logic complexity. The intermediate arrays used for storing result, etc. are not proportinal to the size of the input. Hence O(1)
 
 # Potential improvements
 1) the block that compares sum of bids with max bid amount and constructing result array is repeated. This can be moved to a seperate function. Idea is not to overwhelm with many functions. So it is left like that 
 2) Right now codes vlaidates the emptyness of the whole participation or percentages. Good to have the check for individual values as well
+3) There is always a better solution. But it comes at cost. O(n2) can be reduced at an expense of space
