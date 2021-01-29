@@ -116,6 +116,12 @@ if __name__ == "__main__":
 
     # get the sorted array of bid objects
     sorted_bids = construct_bids(raw_participations, raw_percentages)
+    # check if particiaption exceeds loan amount
+    for bid in sorted_bids:
+        if bid.participation > loan_amount:
+            print("Particiaption amount should NOT exceed loan amount")
+            exit(1)
+
     if sorted_bids is not None:
         print("indeces for seller max profit: {}".format(max_seller_profit(sorted_bids, loan_amount)))
     else:
