@@ -29,6 +29,7 @@ out: enter valid values
 
 ## other cases
 1) Input:
+
 200
 
 100 90 30 200 80 100
@@ -39,6 +40,7 @@ Output:
 [3]
 
 2) Input:
+
 200
 
 100 90 30 200 80 100
@@ -49,6 +51,7 @@ Output:
 [1,2,4]
 
 3) Input:
+
 200
 
 100 90 30 200 80 100
