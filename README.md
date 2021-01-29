@@ -20,8 +20,11 @@ python loan_market_place.py
 # test cases
 ## 1) different participation amount & percentage lengths 
 200 
+
 100 90 30 200 80 100
+
 99 100 99 98.9 100 
+
 out: enter valid values
 
 ## other cases
