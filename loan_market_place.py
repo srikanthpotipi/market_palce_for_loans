@@ -98,8 +98,8 @@ def max_seller_profit(sorted_bids, loan_amount):
                 left += 1
             else:
                 right -= 1
-
-    print("max amount for the seller is: {}".format(max_amount))
+    if max_amount > 0.0:
+        print("max amount for the seller is: {}".format(max_amount))
     return result
 
 
@@ -123,7 +123,11 @@ if __name__ == "__main__":
             exit(1)
 
     if sorted_bids is not None:
-        print("indeces for seller max profit: {}".format(max_seller_profit(sorted_bids, loan_amount)))
+        indices = max_seller_profit(sorted_bids, loan_amount)
+        if not indices:
+            print("There is no particiaption sum that equals given loan amount")
+            exit(1)
+        print("indeces for seller max profit: {}".format(indices))
     else:
         print("Enter valid particiaptions and percentages")
         exit(1)
